@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "CloudflareDns": {
+      "commandName": "Project"
+    }
+  }
+}
