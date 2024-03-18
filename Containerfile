@@ -12,10 +12,7 @@ ADD CloudflareDns .
 RUN dotnet publish -o /app -r linux-x64 -c Release
 
 
-FROM cgr.dev/chainguard/wolfi-base
-
-RUN apk add --no-cache \
-    dotnet-8-runtime
+FROM cgr.dev/chainguard/dotnet-runtime:latest
 
 WORKDIR /app
 COPY --from=build /app .
